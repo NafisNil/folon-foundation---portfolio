@@ -29,8 +29,11 @@
               <div class="card-header">
                 <h3 class="card-title">Settings</h3>
 
-
+                @if ($settingCount < 1)
                 <a href="{{route('setting.create')}}" class="float-right btn btn-outline-dark btn-sm mb-2"><i class="fas fa-plus-square"></i></a>
+                @endif
+
+
 
 
               </div>
@@ -57,34 +60,39 @@
 
 
 
+                    @if ($settingCount > 0)
+
 
 
                   <tr>
-                    <td>{{++$key}}</td>
-                    <td>{{$item->phone}}</td>
-                    <td>{{@$item->email}}</td>
-                    <td> <img src="{{(!empty($item->logo))?URL::to('storage/'.$item->logo):URL::to('image/no_image.png')}}" alt="" style="max-height:150px"></td>
-                    <td>{!!$item->address!!}</td>
+                    <td>1</td>
+                    <td>{{@$setting->phone}}</td>
+                    <td>{{@$setting->email}}</td>
+                    <td> <img src="{{(!empty($setting->logo))?URL::to('storage/'.$setting->logo):URL::to('image/no_image.png')}}" alt="" style="max-height:150px"></td>
+                    <td>{!!$setting->address!!}</td>
 
 
 
                    <td>
 
 
-                      <a href="{{route('setting.edit',[$item->id])}}" title="Edit"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
+                      <a href="{{route('setting.edit',[$setting])}}" title="Edit"><button class="btn btn-outline-info btn-sm"><i class="fas fa-pen-square"></i></button></a>
 
-                      <form action="{{route('setting.destroy',[$item->id])}}" method="POST">
+                      @if ($settingCount > 0 )
+
+
+                      <form action="{{route('setting.destroy',[$setting])}}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button class="btn btn-outline-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></button>
                       </form>
 
-
+                      @endif
 
                     </td>
 
                   </tr>
-
+                  @endif
 
 
                   </tbody>

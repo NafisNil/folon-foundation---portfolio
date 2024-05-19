@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Requests\SettingRequest;
+
 use Image;
 class SettingController extends Controller
 {
@@ -14,9 +15,10 @@ class SettingController extends Controller
     public function index()
     {
         //
-        $setting = Setting::orderBy('id', 'desc')->get();
+        $setting = Setting::orderBy('id', 'desc')->first();
+        $settingCount = Setting::count();
 
-        return view('backend.setting.index',['setting'=>$setting]);
+        return view('backend.setting.index',['setting'=>$setting, 'settingCount' => $settingCount]);
     }
 
     /**
@@ -67,7 +69,7 @@ class SettingController extends Controller
     public function update(SettingRequest $request, Setting $setting)
     {
         //
-        $category->update($request->all());
+        $setting->update($request->all());
         if ($request->hasFile('logo')) {
             @unlink('storage/'.$setting->logo);
             $this->_uploadImage($request, $setting);

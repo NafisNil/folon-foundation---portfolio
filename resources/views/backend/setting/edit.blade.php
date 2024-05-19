@@ -33,10 +33,10 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('settings.update',[$edit])}}" method="POST" enctype="multipart/form-data">
+              <form action="{{route('setting.update',[$edit])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-              @include('backend.settings.form')
+              @include('backend.setting.form')
                       </form>
             </div>
             <!-- /.card -->
