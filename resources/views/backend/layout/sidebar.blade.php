@@ -92,6 +92,59 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('aboutus.index') }}" {{$route == 'aboutus.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                About Us
+
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="{{ route('counter.index') }}" {{$route == 'counter.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Counter
+
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="{{ route('team.index') }}" {{$route == 'team.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Team
+
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="{{ route('testimonial.index') }}" {{$route == 'testimonial.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Testimonial
+
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('whatwedo.index') }}" {{$route == 'whatwedo.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                What We Do
+
+              </p>
+            </a>
+          </li>
+
 
          <hr>
 

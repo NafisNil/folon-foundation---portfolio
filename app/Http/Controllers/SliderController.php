@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Http\Requests\SliderRequest;
-
 use Image;
 class SliderController extends Controller
 {
@@ -16,7 +15,7 @@ class SliderController extends Controller
     {
         //
         $slider = Slider::orderBy('id', 'desc')->get();
-        $sliderCount = Setting::count();
+        $sliderCount = Slider::count();
 
         return view('backend.slider.index',['slider'=>$slider, 'sliderCount' => $sliderCount]);
     }
@@ -89,5 +88,19 @@ class SliderController extends Controller
         @unlink('storage/'.$slider->logo);
 
         return redirect()->route('slider.index')->with('status','Data deleted successfully!');
+    }
+
+
+    private function _uploadImage($request, $about)
+    {
+        # code...
+        if( $request->hasFile('logo') ) {
+            $image = $request->file('logo');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            Image::make($image)->resize(96, 96)->save('storage/' . $filename);
+            $about->logo = $filename;
+            $about->save();
+        }
+
     }
 }

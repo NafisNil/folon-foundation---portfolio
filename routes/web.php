@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\AboutusController;
+use App\Http\Controllers\CounterController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\WhatwedoController;
+use App\Http\Controllers\CauseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,7 +45,12 @@ Route::middleware('auth')->group(function () {
     Route::resources([
         'setting' => SettingController::class,
         'slider' => SliderController::class,
-
+        'aboutus' => AboutusController::class,
+        'counter' => CounterController::class,
+        'team' => TeamController::class,
+        'testimonial' => TestimonialController::class,
+        'whatwedo' => WhatwedoController::class,
+        'cause' => CauseController::class,
     ]);
 
 });

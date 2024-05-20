@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Requests\SettingRequest;
-
 use Image;
 class SettingController extends Controller
 {

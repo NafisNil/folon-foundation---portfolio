@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="{{asset('backend')}}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('backend')}}/dist/css/adminlte.min.css">
   <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
