@@ -11,6 +11,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\WhatwedoController;
 use App\Http\Controllers\CauseController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,6 +53,8 @@ Route::middleware('auth')->group(function () {
         'testimonial' => TestimonialController::class,
         'whatwedo' => WhatwedoController::class,
         'cause' => CauseController::class,
+        'event' => EventController::class,
+        'blog' => BlogController::class,
     ]);
 
 });

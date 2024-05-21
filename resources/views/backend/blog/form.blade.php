@@ -23,20 +23,6 @@
 
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Raise <span style="color:red" >*</span></label>
-
-    <input type="number" class="form-control" name="raise" value="{!!old('raise',@$edit->raise)!!}">
-
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1">Goal <span style="color:red" >*</span></label>
-
-    <input type="number" class="form-control" name="goal" value="{!!old('goal',@$edit->goal)!!}">
-
-  </div>
-
-  <div class="form-group">
     <label for="exampleInputEmail1">Title <span style="color:red" >*</span></label>
 
     <input type="text" class="form-control" name="title" value="{!!old('title',@$edit->title)!!}">
@@ -44,10 +30,18 @@
   </div>
 
 
+
   <div class="form-group">
     <label for="exampleInputEmail1">Description <span style="color:red" >*</span></label>
 
-    <textarea name="description" id="" cols="30" rows="10" class="form-control">{!!old('description',@$edit->description)!!}</textarea>
+    <textarea name="desc" id="" cols="30" rows="10" class="form-control">{!!old('desc',@$edit->desc)!!}</textarea>
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Long Description </label>
+
+    <textarea name="long_desc" id="" cols="30" rows="10" class="form-control">{!!old('long_desc',@$edit->long_desc)!!}</textarea>
 
   </div>
 
@@ -64,7 +58,8 @@
 
 <script>
 
-    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'desc' );
+    CKEDITOR.replace( 'long_desc' );
 
 </script>
 

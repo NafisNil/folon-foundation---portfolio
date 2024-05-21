@@ -145,6 +145,38 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('cause.index') }}" {{$route == 'cause.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Cause
+
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="{{ route('event.index') }}" {{$route == 'event.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Event
+
+              </p>
+            </a>
+          </li>
+
+
+          
+          <li class="nav-item">
+            <a href="{{ route('blog.index') }}" {{$route == 'blog.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Blog
+
+              </p>
+            </a>
+          </li>
 
          <hr>
 

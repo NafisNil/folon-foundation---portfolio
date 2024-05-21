@@ -1,6 +1,6 @@
 @extends('backend.layout.master')
 @section('title')
-    Testimonial - Create
+    Blog - Create
 @endsection
 @section('content')
 
@@ -8,12 +8,12 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6 offset-3">
-            <h1>Testimonial Form</h1>
+            <h1>Blog Form</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Testimonial Form</li>
+              <li class="breadcrumb-item active">Blog Form</li>
             </ol>
           </div>
         </div>
@@ -29,13 +29,13 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Testimonial Form </h3>
+                <h3 class="card-title">Blog Form </h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="{{route('testimonial.store')}}" method="POST" enctype="multipart/form-data">
+              <form action="{{route('blog.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
-              @include('backend.testimonial.form')
+              @include('backend.blog.form')
                       </form>
             </div>
             <!-- /.card -->
