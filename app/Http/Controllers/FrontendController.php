@@ -14,6 +14,8 @@ use App\Models\Event;
 use App\Models\Team;
 use App\Models\Testimonial;
 use App\Models\Blog;
+use App\Models\Contactform;
+use App\Http\Requests\ContactformRequest;
 class FrontendController extends Controller
 {
     //
@@ -32,7 +34,8 @@ class FrontendController extends Controller
         return view('frontend.index', $data);
     }
 
-    public function contactSubmit(Request $request){
-        
+    public function contactSubmit(ContactformRequest $request){
+        $contactform = Contactform::create($request->all());
+        return redirect()->back()->with('success', 'Thanks for your message!');
     }
 }

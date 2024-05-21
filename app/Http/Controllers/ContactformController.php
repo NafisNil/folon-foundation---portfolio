@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Contactform;
 use Illuminate\Http\Request;
-
 class ContactformController extends Controller
 {
     /**
@@ -13,6 +12,8 @@ class ContactformController extends Controller
     public function index()
     {
         //
+        $contactform = Contactform::orderBy('id', 'desc')->get();
+        return view('backend.message.index', compact('contactform'));
     }
 
     /**

@@ -188,6 +188,16 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('contactform.index') }}" {{$route == 'contactform.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Contact Form
+
+              </p>
+            </a>
+          </li>
+
          <hr>
 
         </ul>

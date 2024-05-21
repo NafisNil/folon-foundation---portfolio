@@ -15,6 +15,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ContactformController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,10 +59,11 @@ Route::middleware('auth')->group(function () {
         'event' => EventController::class,
         'blog' => BlogController::class,
         'social' => SocialController::class,
+        'contactform' => ContactformController::class
     ]);
 
 });
 
 //frontend
 Route::get('/', [FrontendController::class, 'index'])->name('index');
-
+Route::post('/contactformsubmit', [FrontendController::class, 'contactSubmit'])->name('contactformsubmit');
