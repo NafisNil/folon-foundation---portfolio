@@ -13,6 +13,8 @@ use App\Http\Controllers\WhatwedoController;
 use App\Http\Controllers\CauseController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\FrontendController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,7 +57,11 @@ Route::middleware('auth')->group(function () {
         'cause' => CauseController::class,
         'event' => EventController::class,
         'blog' => BlogController::class,
+        'social' => SocialController::class,
     ]);
 
 });
+
+//frontend
+Route::get('/', [FrontendController::class, 'index'])->name('index');
 

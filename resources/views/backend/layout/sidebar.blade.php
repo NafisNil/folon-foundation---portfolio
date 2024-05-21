@@ -167,12 +167,22 @@
           </li>
 
 
-          
+
           <li class="nav-item">
             <a href="{{ route('blog.index') }}" {{$route == 'blog.index'?'active':''}} class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Blog
+
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('social.index') }}" {{$route == 'social.index'?'active':''}} class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Social Media
 
               </p>
             </a>
