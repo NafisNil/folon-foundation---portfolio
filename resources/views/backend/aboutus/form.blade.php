@@ -25,7 +25,7 @@
   <div class="form-group">
     <label for="exampleInputEmail1">About <span style="color:red" >*</span></label>
 
-     <input type="text" class="form-control" name="phone" value="{!!old('phone',@$edit->phone)!!}">
+    <textarea name="about" id="" cols="30" rows="10" class="form-control">{!!old('about',@$edit->about)!!}</textarea>
 
   </div>
 

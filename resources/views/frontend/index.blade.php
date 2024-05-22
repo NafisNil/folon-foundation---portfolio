@@ -175,7 +175,7 @@
                             <p>{!! substr( $item->description , 0, 300)!!}</p>
                         </div>
                         <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
+                            <a class="btn btn-custom" href="{{ route('cause_details', $item->id) }}">Learn More</a>
                             <a class="btn btn-custom">Donate Now</a>
                         </div>
                     </div>
@@ -438,7 +438,7 @@
                                 <img src="{{(!empty($item->logo))?URL::to('storage/'.$item->logo):URL::to('image/no_image.png')}}" alt="Image">
                             </div>
                             <div class="blog-text">
-                                <h3><a href="#">{{ $item->title }}</a></h3>
+                                <h3><a href="{{ route('blogs_details', $item->id) }}">{{ $item->title }}</a></h3>
                                 <p>
                                     {!! substr( $item->desc , 0, 200)!!}
                                 </p>

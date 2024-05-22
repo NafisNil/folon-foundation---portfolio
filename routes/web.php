@@ -66,4 +66,10 @@ Route::middleware('auth')->group(function () {
 
 //frontend
 Route::get('/', [FrontendController::class, 'index'])->name('index');
+Route::get('/about-us', [FrontendController::class, 'about'])->name('about_us');
+Route::get('/causes', [FrontendController::class, 'cause'])->name('causes');
+Route::get('/events', [FrontendController::class, 'event'])->name('events');
+Route::get('/blogs', [FrontendController::class, 'blog'])->name('blogs');
+Route::get('/blogs-details/{id}', [FrontendController::class, 'blog_details'])->name('blogs_details');
+Route::get('/cause-details/{id}', [FrontendController::class, 'cause_details'])->name('cause_details');
 Route::post('/contactformsubmit', [FrontendController::class, 'contactSubmit'])->name('contactformsubmit');

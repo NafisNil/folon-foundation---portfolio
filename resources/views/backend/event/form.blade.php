@@ -40,7 +40,7 @@
   <div class="form-group">
     <label for="exampleInputEmail1">Description <span style="color:red" >*</span></label>
 
-    <textarea name="desc" id="" cols="30" rows="10" class="form-control">{!!old('description',@$edit->description)!!}</textarea>
+    <textarea name="desc" id="" cols="30" rows="10" class="form-control">{!!old('desc',@$edit->desc)!!}</textarea>
 
   </div>
 
